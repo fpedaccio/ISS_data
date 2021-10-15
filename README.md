@@ -63,5 +63,7 @@ fig.show()
 ![image](https://user-images.githubusercontent.com/80207106/137492413-bb3b060d-f560-4956-a321-66e56e4d7a6b.png)
 ##### _30 minutes trayectory plot_
 
+![image](https://i.imgur.com/BtMkiG6.gif)
 
+##### _ 2 Hours trayectory plot GIF
 
