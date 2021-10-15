@@ -51,6 +51,17 @@ for i in range(N):
 fig = px.line_geo(lat=latitudes, lon=longitudes) # Passing our latitudes and longitudes list as parameter
 fig.show()  
 ```
+![image](https://user-images.githubusercontent.com/80207106/137491882-9f2c82f2-f68c-4d84-833e-49baa44bdbc1.png)
+##### _This is a two hours trayectory plot_
+
+#### We can update our plot to orthographic projection with this code:
+```py
+fig.update_geos(projection_type="orthographic")
+fig.update_layout(height=300, margin={"r":0,"t":0,"l":0,"b":0})
+fig.show()  
+```
+![image](https://user-images.githubusercontent.com/80207106/137492413-bb3b060d-f560-4956-a321-66e56e4d7a6b.png)
+##### _30 minutes trayectory plot_
 
 
 
