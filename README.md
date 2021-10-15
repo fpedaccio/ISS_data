@@ -69,4 +69,4 @@ fig.show()
 
 ###### _2 Hours trayectory plot GIF_
 
-![espaciador](https://i.imgur.com/ugx3vyl.jpg)
+
