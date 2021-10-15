@@ -1,3 +1,5 @@
+![espaciador](https://i.imgur.com/ugx3vyl.jpg)
+
 # ISS DATA WITH PYTHON RESEARCH:earth_americas:
 
 ### Plotting ISS trayectory, calculating the velocity over the earth and more.
@@ -67,3 +69,4 @@ fig.show()
 
 ###### _2 Hours trayectory plot GIF_
 
+![espaciador](https://i.imgur.com/ugx3vyl.jpg)
