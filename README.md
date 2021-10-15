@@ -13,13 +13,21 @@ http://open-notify.org/Open-Notify-API/ISS-Location-Now/
 
 
 #### First we need to import the following python modules:
-###### _Pandas to read json data from ISS API, plotly to make the plot of the trayectory and time to time.sleep fumction_
+###### _Pandas to read json data from ISS API, plotly to make the plot of the trayectory and time to time.sleep function_
 ```py
 import pandas as pd
 import plotly.express as px
 import time
 ```
 
+#### Second we need to initialize the list that will save the latitude and longitude points (every sixty seconds). Also initialize the N variable with time in minutes
+
+
+```py
+lati = []
+long = []
+N = 60 # Sixty for one hour trayectory
+```
 
 
 
