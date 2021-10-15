@@ -6,8 +6,11 @@
 
 #### Plotting trayectory:
 
-##### First we need to import the following python modules:
+##### We will use an API to retrieve ISS current position in latitude and longitude
 
+
+##### First we need to import the following python modules:
+####### Pandas to read json data from ISS API
 ```py
 import pandas as pd
 import plotly.express as px
