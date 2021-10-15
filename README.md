@@ -29,7 +29,21 @@ long = []
 N = 60 # Sixty for one hour trayectory
 ```
 
+#### Then we will create the following for loop to keep recording latitude-longitude points separated by one minute
+##### _We use for i in range(N), that is the time that the script will keep running (in hours) because we have a time.sleep(60) in the end
 
+
+```py
+for i in range(N):  
+    url = "http://api.open-notify.org/iss-now.json"
+
+    df = pd.read_json(url)
+    
+    lati.append(df["iss_position"]["latitude"])
+    long.append(df["iss_position"]["longitude"])
+    
+    time.sleep(60) # This is used to separate de point records with one minute
+```
 
 
 
