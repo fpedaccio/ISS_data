@@ -65,5 +65,5 @@ fig.show()
 
 ![image](https://i.imgur.com/BtMkiG6.gif)
 
-##### _ 2 Hours trayectory plot GIF_
+##### _2 Hours trayectory plot GIF_
 
