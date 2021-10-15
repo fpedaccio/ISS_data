@@ -1,4 +1,4 @@
-# ISS DATA WITH PYTHON RESEARCH
+# ISS DATA WITH PYTHON RESEARCH:earth_americas:
 
 ### Plotting ISS trayectory, calculating the velocity over the earth and more.
 
