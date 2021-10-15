@@ -10,7 +10,7 @@
 
 
 ##### First we need to import the following python modules:
-####### Pandas to read json data from ISS API
+###### Pandas to read json data from ISS API
 ```py
 import pandas as pd
 import plotly.express as px
