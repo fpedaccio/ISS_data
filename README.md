@@ -30,7 +30,7 @@ N = 60 # Sixty for one hour trayectory
 ```
 
 #### Then we will create the following for loop to keep recording latitude-longitude points separated by one minute
-##### _We use for i in range(N), that is the time that the script will keep running (in hours) because we have a time.sleep(60) in the end
+##### _We use for i in range(N), that is the time that the script will keep running (in hours) because we have a time.sleep(60) in the end_
 
 
 ```py
@@ -52,7 +52,7 @@ fig = px.line_geo(lat=latitudes, lon=longitudes) # Passing our latitudes and lon
 fig.show()  
 ```
 ![image](https://user-images.githubusercontent.com/80207106/137491882-9f2c82f2-f68c-4d84-833e-49baa44bdbc1.png)
-##### _This is a two hours trayectory plot_
+###### _This is a two hours trayectory plot_
 
 #### We can update our plot to orthographic projection with this code:
 ```py
@@ -61,9 +61,9 @@ fig.update_layout(height=300, margin={"r":0,"t":0,"l":0,"b":0})
 fig.show()  
 ```
 ![image](https://user-images.githubusercontent.com/80207106/137492413-bb3b060d-f560-4956-a321-66e56e4d7a6b.png)
-##### _30 minutes trayectory plot_
+###### _30 minutes trayectory plot_
 
 ![image](https://i.imgur.com/BtMkiG6.gif)
 
-##### _2 Hours trayectory plot GIF_
+###### _2 Hours trayectory plot GIF_
 
