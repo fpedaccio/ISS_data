@@ -4,7 +4,7 @@
 
 ---
 
-#### Plotting trayectory:
+#### **Plotting trayectory:**
 ##### _We are going to make a graph of the trajectory of the ISS that is N minutes long. N will be chosen by the user according to their preferences. This means that the program will run and they keep points in a list for N minutes._
 
 ##### We will use an API to retrieve ISS current position in latitude and longitude:
