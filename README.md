@@ -45,5 +45,12 @@ for i in range(N):
     time.sleep(60) # This is used to separate de point records with one minute
 ```
 
+#### When the for loop finish the iterating we will have a record of N minutes ISS trayectory. Now we can plot this with Plotly (px.line_geo):
+##### _px.line_geo will create a plot with earth map
+```py
+fig = px.line_geo(lat=latitudes, lon=longitudes) # Passing our latitudes and longitudes list as parameter
+fig.show()  
+```
+
 
 
