@@ -68,7 +68,7 @@ fig.show()
 ![image](https://i.imgur.com/BtMkiG6.gif)
 
 ###### _2 Hours trajectory plot GIF_
-
+---
 ### **Estimating ISS velocity:**
 
 #####  _We will estimate the ISS velocity using two diferent latitude-longitude points separated by one minute (sixty seconds). We can get the distance between that two points and then use phisics formula velocity(m/s) = distance(in meters)/time(in seconds)_
