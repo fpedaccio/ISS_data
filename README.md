@@ -2,11 +2,11 @@
 
 # International Space Station data with Python research:earth_americas:
 
-### Plotting ISS trajectory, calculating the velocity over the earth and more.
+### _Plotting ISS trajectory, calculating the velocity over the earth and more._
 
 ---
 
-#### **Plotting trajectory:**
+### **Plotting trajectory:**
 ##### _We are going to make a graph of the trajectory of the ISS that is N minutes long. The N will be chosen by the user according to their preferences. This means that the program will run and keep points in a list for N minutes._
 
 ##### We will use an API to retrieve ISS current position in latitude and longitude:
@@ -69,4 +69,15 @@ fig.show()
 
 ###### _2 Hours trajectory plot GIF_
 
+### **Estimating ISS velocity:**
 
+##### _We will estimate the ISS velocity using two diferent latitude-longitude points separated by one minute (sixty seconds)_
+
+
+# First import the following python modules
+
+```py
+import pandas as pd # Pandas to read API data
+import time # Time for time.sleep
+import geopy.distance # Geopy to get distance between two lat-lon points
+```
