@@ -71,13 +71,94 @@ fig.show()
 
 ### **Estimating ISS velocity:**
 
-##### _We will estimate the ISS velocity using two diferent latitude-longitude points separated by one minute (sixty seconds)_
+#####  _We will estimate the ISS velocity using two diferent latitude-longitude points separated by one minute (sixty seconds). We can get the distance between that two points and then use phisics formula velocity(m/s) = distance(in meters)/time(in seconds)_
 
 
-# First import the following python modules
+#### First import the following python modules
 
 ```py
 import pandas as pd # Pandas to read API data
 import time # Time for time.sleep
 import geopy.distance # Geopy to get distance between two lat-lon points
+import requests # Get another API data
+import json # Read that data
 ```
+
+##### _We need to initialize two empty list to save latitudes and longitudes_
+
+
+```py
+lat = []
+long = []
+```
+
+##### _Next we will use a for loop to get the two latitude-longitude points separated by 60 seconds (time.sleep(60))_
+
+
+```py
+for i in range(2):  # for in range(2) because we want two lat-lon points
+
+    url = "http://api.open-notify.org/iss-now.json" # API url
+
+    df = pd.read_json(url) # Read API Json data with Pandas
+
+    lat.append(df["iss_position"]["latitude"]) # Append latitude to lat list
+    long.append(df["iss_position"]["longitude"]) # Append longitude to long list
+
+    time.sleep(60) # Wait 60 seconds to record the second lat-lon point
+```
+
+##### _When this for loop finish we will have a lat list we two latitude positions and one long list with two longitude positions. In conjuntion of this 4 numbers we have two lat-lon points in different time moments (separated by one minute)_
+
+#### Then we must get the distance between this points:
+
+##### _We create the two different points. The first one with lat[0] index and long[0]. The second one with lat[1] and long[0]_
+
+```py
+coords_1 = (lat[0], long[0]) 
+coords_2 = (lat[1], long[1])
+```
+
+##### _Then calculate distance with geopy library:_
+
+```py
+distance = (
+geopy.distance.distance(coords_1, coords_2).m
+) # Distance between the points in meters
+```
+
+##### _But we must make a litle correction. Because ISS isnt moving in earth surface. Its orbiting aproximately 400Km above earth surface. So the radius is greater. The distance traveled is a litle bit more. To do so we need to get iss current altitud. Use the following code:_
+
+
+![image](https://i.imgur.com/jDZATbD.png)
+
+```py
+iss_alt_url = "https://api.wheretheiss.at/v1/satellites/25544"
+r = requests.get(iss_alt_url)
+r = r.text
+r = json.loads(r)
+
+iss_alt = int(r["altitude"]) # IN KM
+```
+
+##### _Now apply phisics formula to make the correcion_
+
+
+```py
+earth_radius = 6371 # in KM
+distance_corrected = (distance * (earth_radius+iss_alt)/earth_radius)
+```
+
+##### Now finish the calculation with speed formula already explained:
+
+```py
+speed = distancia_corrected/60 
+
+
+print(round(speed*3.6, 3), "KM/H")
+```
+```
+26367.118 KM/h
+```
+
+
