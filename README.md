@@ -108,7 +108,7 @@ for i in range(2):  # for in range(2) because we want two lat-lon points
     time.sleep(60) # Wait 60 seconds to record the second lat-lon point
 ```
 
-##### _When this for loop finish we will have a lat list we two latitude positions and one long list with two longitude positions. In conjuntion of this 4 numbers we have two lat-lon points in different time moments (separated by one minute)_
+##### _When this for loop finish we will have a lat list with two latitude positions and one long list with two longitude positions. In conjuntion of this 4 numbers we have two lat-lon points in different time moments (separated by one minute)_
 
 #### Then we must get the distance between this points:
 
@@ -127,7 +127,7 @@ geopy.distance.distance(coords_1, coords_2).m
 ) # Distance between the points in meters
 ```
 
-##### _But we must make a litle correction. Because ISS isnt moving in earth surface. Its orbiting aproximately 400Km above earth surface. So the radius is greater. The distance traveled is a litle bit more. To do so we need to get iss current altitud. Use the following code:_
+##### _But we must make a litle correction. Because ISS isn't moving in earth surface. It's orbiting aproximately 400Km above earth surface. So the radius is greater. The distance traveled is a litle bit more. To do this, we need to get ISS current altitud. Use the following code:_
 
 
 ![image](https://i.imgur.com/jDZATbD.png)
@@ -141,7 +141,7 @@ r = json.loads(r)
 iss_alt = int(r["altitude"]) # IN KM
 ```
 
-##### _Now apply phisics formula to make the correcion_
+##### _Now apply phisics formula to make the correction_
 
 
 ```py
