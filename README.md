@@ -155,7 +155,7 @@ distance_corrected = (distance * (earth_radius+iss_alt)/earth_radius)
 speed = distancia_corrected/60 
 
 
-print(round(speed*3.6, 3), "KM/H")
+print(round(speed*3.6, 3), "KM/H") # Multiplied by 3.6 to convert from m/s to km/h. Rounded by 3.
 ```
 ```
 26367.118 KM/h
