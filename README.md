@@ -157,6 +157,7 @@ speed = distancia_corrected/60
 
 print(round(speed*3.6, 3), "KM/H") # Multiplied by 3.6 to convert from m/s to km/h. Rounded by 3.
 ```
+#### Output:
 ```
 26367.118 KM/h
 ```
