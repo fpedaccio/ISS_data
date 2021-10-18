@@ -161,6 +161,33 @@ print(round(speed*3.6, 3), "KM/H") # Multiplied by 3.6 to convert from m/s to km
 ```
 26367.118 KM/h
 ```
+
+---
+### **Proving physical postulate that follows from kepler's second law with the ISS:**
+
+##### _A body in elliptical orbit around another of greater mass moves at minimum orbital speed when it is in its apoaster (apogee for a body in orbit around the Earth) and at maximum orbital speed when it is in its periaster 1 ( perigee for a body in orbit around the Earth) because, according to Kepler's second law, in its travel through the ellipse the body sweeps equal areas in equal times._
+
+#### We will use the database_api that i included in this repository. It include 300 minutes os ISS Data.
+```py
+import pandas
+matrixpandas = pandas.read_csv("dataset_api.csv")
+```
+
+#### And then:
+```py
+import plotly.express as px
+
+print("Un cuerpo en órbita elíptica alrededor de otro de mayor masa se mueve a la mínima velocidad orbital cuando se encuentra en su apoastro (apogeo para un cuerpo en órbita alrededor de la Tierra) y a la máxima velocidad orbital cuando se encuentra en su periastro 1​ (perigeo para un cuerpo en órbita alrededor de la Tierra) debido a que, según la segunda ley de Kepler, en su recorrido por la elipse el cuerpo barre áreas iguales en tiempos iguales.")
+fig = px.line(matrixpandas, x="time_utc", y="velocity_api", title='ISS Velocity cycle')
+fig.show()
+fig = px.line(matrixpandas, x="time_utc", y="altitude", title='ISS Altitude cycle')
+fig.show()
+```
+#### Output:
+![image](https://i.imgur.com/SNlCwej.png) ![image](https://i.imgur.com/rvvlRKK.png)
+
+#### _It is demonstrated that the body that orbits elliptically (ISS) to another body of greater mass (Earth) reaches its minimum orbital speed at its apoaster. And its higher orbital speed in its periaster._
+
 <br>
 
 > ISS data - 2021 - Made by Facundo Pedaccio
